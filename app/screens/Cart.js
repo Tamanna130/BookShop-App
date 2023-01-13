@@ -108,7 +108,7 @@ function Cart(props) {
             <View style={{ height: '6%', backgroundColor: '#9970e6', }}>
                 <View style={{ width: '100%', height: '100%', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontWeight: "700", color: 'white' }}>Total Price - $ {totalAmount} </Text>
-                    <TouchableOpacity onPress={() => console.log("Hello")} style={{ marginLeft: '25%' }}>
+                    <TouchableOpacity onPress={() => props.navigation.navigate('Checkout', { price: totalAmount })} style={{ marginLeft: '25%' }}>
                         <View ><Text style={{ fontWeight: "700", color: 'white' }}>{'|        Checkout    >'}</Text></View>
                     </TouchableOpacity>
                 </View>

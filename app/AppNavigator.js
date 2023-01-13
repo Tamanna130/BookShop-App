@@ -3,12 +3,12 @@ import React from 'react';
 import { View, Text } from 'react-native';
 // import HomeScreen from './screens/HomeScreen';
 import BookListScreen from './screens/BookListScreen';
-// import Cart from './screens/Cart';
+import Cart from './screens/Cart';
 import BookDetailsScreen from './screens/BookDetailsScreen';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
 // import ItemAmount from './components/ItemAmount';
-// import Checkout from './screens/Checkout';
+import Checkout from './screens/Checkout';
 // import Orders from './screens/Orders';
 import Login from './screens/login/Login';
 
@@ -48,7 +48,7 @@ export const CartNav = () => {
                     },
                 }}
             />
-            {/* <Stack.Screen name='Checkout' component={Checkout} options={{
+            <Stack.Screen name='Checkout' component={Checkout} options={{
                 headerTitleAlign: "center",
 
                 headerStyle: {
@@ -61,7 +61,7 @@ export const CartNav = () => {
                     textAlign: "center",
                     // flex: 1
                 },
-            }} /> */}
+            }} />
         </Stack.Navigator>
     );
 }
@@ -89,7 +89,7 @@ const Home = (props) => {
                     fontWeight: 'bold',
                 },
             }} />
-            <Drawer.Screen name='Orders' component={Orders} />
+            {/* <Drawer.Screen name='Orders' component={Orders} /> */}
         </Drawer.Navigator>
 
 
