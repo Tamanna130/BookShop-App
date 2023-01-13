@@ -11,6 +11,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Checkout from './screens/Checkout';
 import Orders from './screens/Orders';
 import Login from './screens/login/Login';
+import Logout from './screens/logout/Logout';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -69,8 +70,9 @@ export const CartNav = () => {
 const Home = (props) => {
     return (
         <Drawer.Navigator>
-            <Drawer.Screen name='Home' component={AllBooks} options={{
+            <Drawer.Screen name='Home' component={AllBooks} options={({ navigation }) => ({
                 title: 'Home',
+                headerRight: () => <Logout navigation={navigation} />,
                 headerStyle: {
                     backgroundColor: 'coral',
                 },
@@ -78,7 +80,7 @@ const Home = (props) => {
                 headerTitleStyle: {
                     fontWeight: 'bold',
                 },
-            }} />
+            })} />
             <Drawer.Screen name='Cart' component={CartNav} options={{
                 title: 'Cart',
                 headerStyle: {

@@ -30,8 +30,6 @@ function Checkout(props) {
         axios.post('https://mybooks-93063-default-rtdb.firebaseio.com/orders.json', order)
             .then(res => console.log(res))
             .catch(err => console.log(err))
-        for (let item of props.cart)
-            props.cart.pop()
         props.navigation.navigate('Home')
     }
     return (
