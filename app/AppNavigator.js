@@ -10,7 +10,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 // import ItemAmount from './components/ItemAmount';
 // import Checkout from './screens/Checkout';
 // import Orders from './screens/Orders';
-// import Login from './screens/login/Login';
+import Login from './screens/login/Login';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -101,7 +101,7 @@ const AppNavigator = (props) => {
     return (
 
         <Stack.Navigator>
-            {/* <Stack.Screen name='Login' component={Login} /> */}
+            <Stack.Screen name='Login' component={Login} />
             <Stack.Screen name='Home' component={Home} options={{ headerShown: false }} />
         </Stack.Navigator>
 
