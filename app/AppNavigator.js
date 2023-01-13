@@ -3,14 +3,15 @@ import React from 'react';
 import { View, Text } from 'react-native';
 // import HomeScreen from './screens/HomeScreen';
 import BookListScreen from './screens/BookListScreen';
-// import Cart from './screens/Cart';
+import Cart from './screens/Cart';
 import BookDetailsScreen from './screens/BookDetailsScreen';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
 // import ItemAmount from './components/ItemAmount';
-// import Checkout from './screens/Checkout';
-// import Orders from './screens/Orders';
+import Checkout from './screens/Checkout';
+import Orders from './screens/Orders';
 import Login from './screens/login/Login';
+import Logout from './screens/logout/Logout';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -48,7 +49,7 @@ export const CartNav = () => {
                     },
                 }}
             />
-            {/* <Stack.Screen name='Checkout' component={Checkout} options={{
+            <Stack.Screen name='Checkout' component={Checkout} options={{
                 headerTitleAlign: "center",
 
                 headerStyle: {
@@ -61,7 +62,7 @@ export const CartNav = () => {
                     textAlign: "center",
                     // flex: 1
                 },
-            }} /> */}
+            }} />
         </Stack.Navigator>
     );
 }
@@ -69,8 +70,9 @@ export const CartNav = () => {
 const Home = (props) => {
     return (
         <Drawer.Navigator>
-            <Drawer.Screen name='Home' component={AllBooks} options={{
+            <Drawer.Screen name='Home' component={AllBooks} options={({ navigation }) => ({
                 title: 'Home',
+                headerRight: () => <Logout navigation={navigation} />,
                 headerStyle: {
                     backgroundColor: 'coral',
                 },
@@ -78,7 +80,7 @@ const Home = (props) => {
                 headerTitleStyle: {
                     fontWeight: 'bold',
                 },
-            }} />
+            })} />
             <Drawer.Screen name='Cart' component={CartNav} options={{
                 title: 'Cart',
                 headerStyle: {
