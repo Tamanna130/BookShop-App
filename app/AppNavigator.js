@@ -9,7 +9,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
 // import ItemAmount from './components/ItemAmount';
 import Checkout from './screens/Checkout';
-// import Orders from './screens/Orders';
+import Orders from './screens/Orders';
 import Login from './screens/login/Login';
 
 const Drawer = createDrawerNavigator();
@@ -89,7 +89,7 @@ const Home = (props) => {
                     fontWeight: 'bold',
                 },
             }} />
-            {/* <Drawer.Screen name='Orders' component={Orders} /> */}
+            <Drawer.Screen name='Orders' component={Orders} />
         </Drawer.Navigator>
 
 
