@@ -33,38 +33,38 @@ export const AllBooks = () => {
     );
 }
 
-// export const CartNav = () => {
-//     return (
-//         <Stack.Navigator>
-//             <Stack.Screen name="Cart Details" component={Cart}
-//                 options={{
-//                     headerShown: false,
-//                     headerStyle: {
-//                         backgroundColor: 'coral',
-//                     },
-//                     headerTintColor: '#fff',
-//                     headerTitleStyle: {
-//                         fontWeight: 'bold',
-//                     },
-//                 }}
-//             />
-//             <Stack.Screen name='Checkout' component={Checkout} options={{
-//                 headerTitleAlign: "center",
+export const CartNav = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Cart Details" component={Cart}
+                options={{
+                    headerShown: false,
+                    headerStyle: {
+                        backgroundColor: 'coral',
+                    },
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                }}
+            />
+            {/* <Stack.Screen name='Checkout' component={Checkout} options={{
+                headerTitleAlign: "center",
 
-//                 headerStyle: {
-//                     backgroundColor: '#faeccf',
+                headerStyle: {
+                    backgroundColor: '#faeccf',
 
-//                 },
-//                 headerTintColor: '#7a7a78',
-//                 headerTitleStyle: {
-//                     fontWeight: 'bold',
-//                     textAlign: "center",
-//                     // flex: 1
-//                 },
-//             }} />
-//         </Stack.Navigator>
-//     );
-// }
+                },
+                headerTintColor: '#7a7a78',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                    textAlign: "center",
+                    // flex: 1
+                },
+            }} /> */}
+        </Stack.Navigator>
+    );
+}
 
 const Home = (props) => {
     return (
@@ -79,7 +79,7 @@ const Home = (props) => {
                     fontWeight: 'bold',
                 },
             }} />
-            {/* <Drawer.Screen name='Cart' component={CartNav} options={{
+            <Drawer.Screen name='Cart' component={CartNav} options={{
                 title: 'Cart',
                 headerStyle: {
                     backgroundColor: 'coral',
@@ -89,7 +89,7 @@ const Home = (props) => {
                     fontWeight: 'bold',
                 },
             }} />
-            <Drawer.Screen name='Orders' component={Orders} /> */}
+            <Drawer.Screen name='Orders' component={Orders} />
         </Drawer.Navigator>
 
 

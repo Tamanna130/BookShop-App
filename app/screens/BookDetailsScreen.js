@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, Button, TouchableOpacity } from 'react-native';
-// import Cart from './Cart';
+import Cart from './Cart';
 import { addToCart, itemAmountInc } from '../redux/ActionCreators';
 import { connect } from 'react-redux';
 const mapStateToProps = (state) => {
@@ -31,7 +31,7 @@ const BookDetailsScreen = (props) => {
             props.addToCart(book);
             props.itemAmountInc(book.id)
         }
-        // props.navigation.navigate('Cart')
+        props.navigation.navigate('Cart')
 
     }
 
